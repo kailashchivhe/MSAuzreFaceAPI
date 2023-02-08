@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Demo of Image offset in JavaScript</title>
+<script language='JavaScript' type='text/JavaScript'>
+    window.onload = function() {
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var img = document.getElementById('scream');
+
+    context.drawImage(img, 100, 100);
+
+    context.beginPath();
+    context.rect(118, 200, 89, 126);
+    context.lineWidth = 2;
+    context.strokeStyle = 'red';
+    context.stroke();
+}
+</script>
+</head>
+<body >
+    <img id="scream" src="./faces.jpeg" alt="The Scream" width="220" height="277">
+    <p>Canvas:</p>
+    <canvas id="canvas" width="1000" height="1000">
+    Your browser does not support the HTML5 canvas tag.</canvas>
+</body>
+</html>
